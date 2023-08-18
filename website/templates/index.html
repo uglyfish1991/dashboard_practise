@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <div>
+        <h1>To Do List</h1>
+
+        <form action="/add" method="post">
+            <div>
+                <label>Todo task</label>
+                <input type="text" name="drinks_sold" placeholder="Enter Drinks Sold">
+                <input type="text" name="money_made" placeholder="Enter money made">
+                <button type="submit">Enter Data</button>
+            </div>
+        </form>
+
+        <hr>
+
+        {% for sales in salesfigures_list %}
+        <div>
+            <p>Sale ID: {{sales.id }} | Drinks Sold:{{ sales.drinks_sold }} | Income: £{{ sales.money_made }} | Mean: {{ sales.mean }}</p>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="/generate">Generate Excel File</a>
+    <a href="sales_figures.xlsx">Download</a>
+</body>
+
+</html>
