@@ -23,7 +23,7 @@
 
         {% for sales in salesfigures_list %}
         <div>
-            <p>Sale ID: {{sales.id }} | Drinks Sold:{{ sales.drinks_sold }} | Income: £{{ sales.money_made }} | Mean: {{ sales.mean }}</p>
+            <p>Sale ID: {{sales.id }} | Drinks Sold:{{ sales.drinks_sold }} | Income: £{{ sales.money_made }} | Mean: £{{ sales.mean }}</p>
             <hr>
         </div>
         {% endfor %}

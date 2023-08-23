@@ -37,8 +37,8 @@ def generate():
     return send_file('../sales_figures.xlsx')
 
 def graph_generate():
-    days = ["Monday", "Tuesday", "Wednesday"]
-    means = Salesfigures.query.filter(Salesfigures.mean).limit(3).all()
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    means = Salesfigures.query.filter(Salesfigures.mean).limit(7).all()
     means = [(mean.mean) for mean in means]
     print(means)
 
