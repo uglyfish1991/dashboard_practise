@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Dashboard - MegaBytes Coffee Shop</title>
-</head>
+{% extends 'base.html' %}
 
-<body>
-    <div>
-        <h1>Data Dashboard</h1>
+{% block content %}
 
         <form action="/add" method="post">
             <div>
-                <label>Todo task</label>
+                <label>Input Data</label>
                 <input type="text" name="drinks_sold" placeholder="Enter Drinks Sold">
                 <input type="text" name="money_made" placeholder="Enter money made">
                 <button type="submit">Enter Data</button>
@@ -30,6 +22,5 @@
     </div>
     <a href="/generate">Download Excel File</a>
     <a href="/see_graph">Generate Graph</a>
-</body>
 
-</html>
+{% endblock %}
