@@ -3,6 +3,11 @@ from .models import Salesfigures
 from . import db
 import pandas as pd
 import openpyxl
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+
+import os
 
 
 my_view = Blueprint("my_view", __name__)
@@ -30,5 +35,25 @@ def generate():
     df.to_excel("sales_figures.xlsx", sheet_name = 'Sales Figures', index = False)
     
     return send_file('../sales_figures.xlsx')
+
+def graph_generate():
+    days = ["Monday", "Tuesday", "Wednesday"]
+    means = Salesfigures.query.filter(Salesfigures.mean).limit(3).all()
+    means = [(mean.mean) for mean in means]
+    print(means)
+
+    plt.scatter(days, means)
+    plt.xlabel("Day of the Week")
+    plt.ylabel("Mean Price of Drink")
+
+    return plt
+
+@my_view.get("/see_graph")
+def see_graph():
+    plot = graph_generate()
+
+    plot.savefig('website/static/images/plot.png')
+
+    return render_template("plot1.html")
 
 
