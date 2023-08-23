@@ -9,5 +9,7 @@ The aim of the project is to create a Flask app which allows users to enter cert
 The app will also allow users to download this data as an excel file.
 
 Other functionalility I am looking to include:
-1. Ability to generate matplotlib chart of a week's worth of sales figures.
+1. CRUD operations on rows
+2. Ability to generate matplotlib chart of a week's worth of sales figures.
+3. Ability to choose graph paramters (show mean, show daily sales, show drinks sold etc)
  
