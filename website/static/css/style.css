@@ -1,3 +1,45 @@
-body{
-    background-color: aliceblue;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@600&display=swap');
+
+body {
+    background-color: rgb(232, 232, 232);
+}
+
+header {
+    background: rgb(66, 66, 237);
+    background: linear-gradient(0deg, rgba(66, 66, 237, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    text-align: center;
+    color: white;
+    
+}
+
+header h1{
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    text-shadow: 1px 1px 3px black;
+    margin: 0px;
+}
+
+header p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5 rem;
+    margin-bottom: 10px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.433);
+    font-family: 'Roboto', sans-serif;
+    padding: 7px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+.container {
+    width: 85%;
+    background-color: rgb(255, 249, 249);
+    box-shadow: 3px 3px 12px grey;
+    margin: 0 auto;
 }

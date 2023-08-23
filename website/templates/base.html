@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MegaBytes Coffee Shop</title>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
 </head>
-<body>
-    <header>
-        <h1>MegaBytes Coffee Shop</h1>
-        <p>Daily Sales Dashboard</p>
-        <nav>
-            <a href="#"> Link</a>
-            <a href="#"> Link</a>
-            <a href="#"> Link</a>
-            <a href="#"> Link</a>
-            <a href="#"> Link</a>
-        </nav>
-    </header>
-    <div>
-    {% block content %}
 
-    {% endblock %}
-</div>
-    <footer> &copy Klong Designs 2023 </footer>
+<body>
+    <div class="container">
+        <header>
+            <h1>MegaBytes Coffee Shop</h1>
+            <p>Daily Sales Dashboard</p>
+            <nav>
+                <a href="#"> Link</a>
+                <a href="#"> Link</a>
+                <a href="#"> Link</a>
+                <a href="#"> Link</a>
+                <a href="#"> Link</a>
+            </nav>
+        </header>
+        <div>
+            {% block content %}
+
+            {% endblock %}
+        </div>
+        <footer> &copy Klong Designs 2023 </footer>
+    </div>
+
 </body>
+
 </html>
